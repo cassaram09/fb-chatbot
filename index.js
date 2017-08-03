@@ -35,7 +35,7 @@ app.post('/webhook/', function(request, response) {
     let sender = event.sender.id
     if (event.message && event.message.text) {
       let text = event.message.text
-      sendGenericTextMessage(sender, "Text received, echo: " + text.substring(0, 200))
+      sendGenericMessage(sender, "Text received, echo: " + text.substring(0, 200))
     }
   }
   response.sendStatus(200)
